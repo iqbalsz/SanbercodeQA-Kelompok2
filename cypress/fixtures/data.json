@@ -1,4 +1,9 @@
 {
   "vld_username": "kelompok2",
-  "vld_password": "kelompok2"
+  "vld_password": "kelompok2",
+
+  "validEmail": "ilyas@gmail.com",
+  "validName": "ilyas",
+  "validMsg": "test message",
+  "invalidEmail": "ilyasgakpakeemail"
 }
