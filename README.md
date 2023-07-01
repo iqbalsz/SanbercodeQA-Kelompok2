@@ -1,17 +1,17 @@
 # SanbercodeQA-Kelompok2
- Final Project BATCH 46 Sanbercode QA // Kelompok 2
+ ## Final Project BATCH 46 Sanbercode QA // Kelompok 2
 ==================================================
 
 Buatlah rangkaian test plan dan test execution dari dummy website https://www.demoblaze.com/
 
-Anggota
+## Anggota
 ==================================================
 1. Celvin Arman Saibi
 2. Ilham Budi Adhipradana
 3. Ilyas Nauval
 4. M Arif iqbal Hidayatullah
 
-Test Cases Document:
+## Test Cases Document:
 ==================================================
 https://docs.google.com/spreadsheets/d/1Zxp_s0xkboxVNwVgEAPOHJn9BYq60E4J3Qf45Dl9nuA/edit#gid=0
 
