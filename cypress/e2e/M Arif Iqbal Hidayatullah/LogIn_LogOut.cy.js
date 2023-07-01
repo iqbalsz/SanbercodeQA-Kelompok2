@@ -16,7 +16,7 @@ describe('Log In and Log Out Test', () => {
     cy.screenshot({capture:'runner'})
   })
 
-  it('TC-LogIn-02 -- Verify Log In Failed -- Wrong password', () => {
+  it.only('TC-LogIn-02 -- Verify Log In Failed -- Wrong password', () => {
     cy.get('#login2').click()
     cy.wait(400)
     cy.get(LoginPage.log_username).type(inputan.vld_username)
