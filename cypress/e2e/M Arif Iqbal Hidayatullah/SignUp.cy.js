@@ -8,12 +8,19 @@ describe('Sign Up Test', () => {
   it('TC-SignUp-01 -- Verify Sign Up Successfully', () => {
     cy.get('#signin2').click() // Klik menu header Sign Up
     cy.wait(400)
-    cy.get(LoginPage.reg_uname).type(inputan.vld_username) // Input Username/Email
+
+    // Random uname function
+    const uuid = () => Cypress._.random(0, 1e6)
+    const id = uuid()
+    const testname = `testname${id}`
+
+    cy.get(LoginPage.reg_uname).type(testname) // Input Username/Email
     cy.get(LoginPage.reg_password).type(inputan.vld_password) // Input Password
     cy.get('[onclick="register()"]').click() // klik tombol Sign Up
-    // cy.on('window:alert', (t)=>{
-    //   expect(t).to.contains('Sign up successful.')
-    // })
+    cy.on('window:alert', (t)=>{
+      expect(t).to.contains('Sign up successful.')
+    })
+    // cy.wait(1000)
     // cy.screenshot({capture:'runner'})
   })
 
@@ -26,7 +33,7 @@ describe('Sign Up Test', () => {
     cy.on('window:alert', (t)=>{
       expect(t).to.contains('This user already exist.')
     })
-    .wait(1000)
+    .wait(2000)
     .screenshot({capture:'runner'})
   })
 
@@ -37,7 +44,7 @@ describe('Sign Up Test', () => {
     cy.on('window:alert', (t)=>{
       expect(t).to.contains('Please fill out Username and Password.')
     })
-    .wait(1000)
+    .wait(2000)
     .screenshot({capture:'runner'})
   })
 })
