@@ -15,6 +15,8 @@ describe('Place Order Automation Test', () => {
      // --
     cy.get('#cartur').click()
     cy.get('.col-lg-8 > h2').should('have.text', 'Products') // Assertions
+    // cy.wait(1000)
+    // cy.screenshot({capture:'runner'})
   })
 
   it('TC-PlaceOrder-02 -- Verify Place Order Successfully', () => {
@@ -42,6 +44,9 @@ describe('Place Order Automation Test', () => {
     
     cy.get('.sweet-alert > h2').should('have.text', 'Thank you for your purchase!') // Assertion
 
+    // cy.wait(1000)
+    // cy.screenshot({capture:'runner'})
+
   })
 
   it('TC-PlaceOrder-03 -- Verify Place Order Successfully', () => {
@@ -65,9 +70,12 @@ describe('Place Order Automation Test', () => {
     
     cy.get('.sweet-alert > h2').should('have.text', 'Thank you for your purchase!') // Assertion
 
+    // cy.wait(1000)
+    // cy.screenshot({capture:'runner'})
+
   })
 
-  it('TC-PlaceOrder-04 -- Verify Place Order Failed', () => {
+  it.only('TC-PlaceOrder-04 -- Verify Place Order Failed -- Blank Field', () => {
     // -- LOGIN FUNCTION
     LoginPage.loginUser(inputan.vld_username,inputan.vld_password)
   
@@ -91,12 +99,14 @@ describe('Place Order Automation Test', () => {
     cy.on('window:alert', (t)=>{
       expect(t).to.contains('Please fill out Name and Creditcard.')
     })
+    // .wait(1000)
+    // .screenshot({capture:'runner'})
 
     
 
   })
 
-  it('TC-PlaceOrder-05 -- Verify Place Order Failed', () => {
+  it('TC-PlaceOrder-05 -- Verify Place Order Failed -- No Item in Cart', () => {
     // -- LOGIN FUNCTION
     LoginPage.loginUser(inputan.vld_username,inputan.vld_password)
   
@@ -120,6 +130,9 @@ describe('Place Order Automation Test', () => {
     cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click() // Click Purchase Button
     
     cy.get('.sweet-alert > h2').should('have.text', 'Thank you for your purchase!') // Assertion
+
+    // cy.wait(1000)
+    // cy.screenshot({capture:'runner'})
 
   })
 
