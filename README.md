@@ -9,7 +9,7 @@ Buatlah rangkaian test plan dan test execution dari dummy website https://www.de
 3. Ilyas Nauval
 4. M Arif iqbal Hidayatullah
 
-## Test Cases Document:
+## Test Plan Document & Test Cases Document:
 https://docs.google.com/spreadsheets/d/1Zxp_s0xkboxVNwVgEAPOHJn9BYq60E4J3Qf45Dl9nuA/edit#gid=0
 
 
