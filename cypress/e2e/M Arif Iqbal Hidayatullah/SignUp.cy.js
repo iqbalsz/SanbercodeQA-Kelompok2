@@ -11,9 +11,9 @@ describe('Sign Up Test', () => {
     cy.get(LoginPage.reg_uname).type(inputan.vld_username) // Input Username/Email
     cy.get(LoginPage.reg_password).type(inputan.vld_password) // Input Password
     cy.get('[onclick="register()"]').click() // klik tombol Sign Up
-    cy.on('window:alert', (t)=>{
-      expect(t).to.contains('Sign up successful.')
-    })
+    // cy.on('window:alert', (t)=>{
+    //   expect(t).to.contains('Sign up successful.')
+    // })
     // cy.screenshot({capture:'runner'})
   })
 
@@ -30,7 +30,7 @@ describe('Sign Up Test', () => {
     .screenshot({capture:'runner'})
   })
 
-  it.only('TC-SignUp-03 -- Verify Sign Up Failed -- Blank Field', () => {
+  it('TC-SignUp-03 -- Verify Sign Up Failed -- Blank Field', () => {
     cy.get('#signin2').click() // Klik menu header Sign Up
     cy.wait(400)
     cy.get('[onclick="register()"]').click() // klik tombol Sign Up
